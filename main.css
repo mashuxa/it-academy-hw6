@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    border: 1px solid red;
+}
+
+td,
+th {
+    padding: 20px;
+    border: 1px dotted gray;
+}
+
+th {
+    cursor: pointer;
+}
+
+th:hover:after {
+    padding: 0 10px;
+    content: "⇓";
+    opacity: 0.5;
+}
+
+th.active-sort:after {
+    padding: 0 10px;
+    content: "⇓";
+}
+
+td {
+    position: relative;
+    cursor: pointer;
+}
+
+thead tr:hover:after {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: green;
+    content: 'Click for sort by column';
+}
+
+tbody tr:hover:after {
+    position: absolute;
+    right: 20px;
+    z-index: 10;
+    color: red;
+    content: 'Click for delete row';
+    cursor: pointer;
+}
